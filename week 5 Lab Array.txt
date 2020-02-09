@@ -1,0 +1,48 @@
+week 5 Lab Array
+#include <stdio.h>
+int mainn()
+{
+     int x = 100; //เก็บค่าตัวแปรในint
+     int a = 0144;
+     int b = 0x64;
+    printf("x = %d\n", x);
+    // printf("reference x = %lu\n", &x); //ดูแอดเดรสของ x ว่าเก็บไว้ได้เท่าไหร่
+    // printf("reference x = %p\n", &x);
+
+    int number[] = {4, 5, 6, 7, 8}; //เป็นตัวกำหนดอิรทรีเม้นในอันเลย์
+    // printf("reference number = %p\n", number);
+    // printf("reference number = %p\n", &number[0]);
+    printf("index 2 = %d", number[2]);
+     printf("reference &number[2] = %p\n", &number+2); //`index ห่างกัน 2 address ห่างกัน 8
+     //ถ้าตัวแปรเป็น pointเตอร์ ต้องดูว่าเป็นไทป์อ่ะไร_
+
+    //  int *ptr = &x;// เก็บตัวแปรตัวอื่น เก็บ _address 
+    //  int *arrPtr; //ตอนประกาศต้องมี *
+    //  arrPtr = number; //ตอนแอดเดส ไม่ต้องมี *
+    //  printf("ptr = %p , value = %d \n", arrPtr+2 , *(arrPtr+2));//ถ้าปริ้นไม่มี* แอดเดรส ถ้ามี*คือค่า
+    //  // number[2]=500;
+    //  *(arrPtr - 3000) = 500;
+    //  printf("arrPtr + 2 = %p , value = %p , value = %d \n",arrPtr)
+
+    int number[] = {4, 5, 6, 7, 8};
+    char input[100];
+    for (int *ptr = number; ptr <= &number[4]; ptr++){
+        printf([%p] = %d\n" , ptr, *ptr);
+    }
+    char input[100];
+    int count = 0;
+    char c;
+    while ((c = getchar()) != "\n" ,){
+        input[count] = x;
+        ++count;
+    }
+    printf("char arr = %s\n", input);
+    for (char *cPtr = input ; *cPtr != '\0' ; cPtr++ )
+    {
+        priintf("%c\n",*cPtr);
+    }
+
+    int a;
+    char c;
+    char s[100];
+    scanf("%d-%c-%s", &a, &c, s);
